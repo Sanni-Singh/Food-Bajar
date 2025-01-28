@@ -9,7 +9,7 @@ import { GoogleAuthProvider } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  // apiKey: "AIzaSyDq2SOz65t1rQa69ESwOZxLkhmS8n95_pM",
+  apiKey: "AIzaSyDq2SOz65t1rQa69ESwOZxLkhmS8n95_pM",
   authDomain: "food-bajar-6acfb.firebaseapp.com",
   projectId: "food-bajar-6acfb",
   storageBucket: "food-bajar-6acfb.firebasestorage.app",

@@ -5,8 +5,8 @@ import { useState } from "react";
 const CartCard = () => {
     const [foodQuantity,setFoodQuantity] = useState(1);
   return (
-    <div className="pt-[130px]  h-[500px]">
-        <div className="w-[500px] hover:shadow-[6px_4px_13px_0px_rgba(0,_0,_0,_0.35)] rounded-md flex gap-8 p-4 items-center m-auto">
+    <div className="">
+        <div className="md:w-[500px] w-[95%] hover:shadow-[6px_4px_13px_0px_rgba(0,_0,_0,_0.35)] rounded-md flex gap-8 p-4 items-center m-auto">
             <img className="w-[150px] h-[150px] rounded-[50%] bg-cover bg-center" src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg?w=900" alt="" />
             <div className="flex flex-col gap-3">
                 <div className="flex items-center justify-between">

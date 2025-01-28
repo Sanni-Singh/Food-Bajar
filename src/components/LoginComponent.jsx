@@ -1,8 +1,9 @@
-import { useRef, useState } from "react"
+import { useContext, useRef, useState } from "react"
 import { signInWithEmailAndPassword , createUserWithEmailAndPassword , updateProfile, signInWithPopup } from "firebase/auth";
 import {auth, googleAuthProvider} from '../utils/firebase'
 import {Validation} from '../utils/validation'
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../App";
 
 const LoginComponent = ()=>{
     const [loginForm , setLoginform]= useState(false);
@@ -10,8 +11,10 @@ const LoginComponent = ()=>{
     const userEmail = useRef()
     const userPass = useRef()
     const userName = useRef()
-    
     const navigate = useNavigate();
+    const ctx = useContext(UserContext);
+    console.log(ctx);
+    
 
     const loginFn = ()=>{
         const mess = Validation(userEmail.current.value , userPass.current.value);
@@ -69,7 +72,9 @@ const LoginComponent = ()=>{
             }
             localStorage.setItem("userData" , JSON.stringify(userDetails));
             console.log(userDetails);
-            navigate("/")
+            ctx.setUser(userDetails)
+            navigate("/");
+
 
         }
         catch(err){
