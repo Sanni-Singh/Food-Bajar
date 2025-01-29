@@ -13,7 +13,6 @@ const LoginComponent = ()=>{
     const userName = useRef()
     const navigate = useNavigate();
     const ctx = useContext(UserContext);
-    console.log(ctx);
     
 
     const loginFn = ()=>{
@@ -30,10 +29,10 @@ const LoginComponent = ()=>{
                 }).then(()=>{
                     const {uid , email , displayName} = auth.currentUser;
                     const userInformation={
-                        id:uid,email:email,name:displayName
+                        id:uid,email:email,displayName:displayName
                     }
                     localStorage.setItem("userInformation" , JSON.stringify(userInformation));
-                    console.log(userInformation);
+                    navigate("/");
                     
                 })
             })
@@ -47,6 +46,13 @@ const LoginComponent = ()=>{
             signInWithEmailAndPassword(auth , userEmail.current.value , userPass.current.value)
             .then((userCredential)=>{
                 const user = userCredential.user;
+                
+                const {uid , email , displayName} = auth.currentUser;
+                    const userInformation={
+                        id:uid,email:email,displayName:displayName
+                    }
+                localStorage.setItem("userInformation" , JSON.stringify(userInformation));
+                navigate("/");
             })
             .catch((error)=>{
                 const errorCode = error.code;
@@ -61,7 +67,6 @@ const LoginComponent = ()=>{
 
         try{
             const res = await signInWithPopup(auth, googleAuthProvider);
-            console.log(res);
             
             const userDetails = {
                 displayName :res.user.displayName,
@@ -71,8 +76,7 @@ const LoginComponent = ()=>{
                 imageUrl:res.user?.photoURL
             }
             localStorage.setItem("userData" , JSON.stringify(userDetails));
-            console.log(userDetails);
-            ctx.setUser(userDetails)
+            // ctx.setUser(userDetails)
             navigate("/");
 
 

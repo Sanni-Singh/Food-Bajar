@@ -1,8 +1,10 @@
 import { FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 const imgId = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/"
 const RestaurantsCard = ({id ,name,location,cuisines ,costForTwo, avgRating,deliveryTime, resImageID}) => {
+    const navigate = useNavigate();
   return (
-    <div className="w-[330px] rounded-xl p-3 flex flex-col gap-2 hover:shadow-[0px_4px_19px_-9px_rgba(0,_0,_0,_0.7)] cursor-pointer ">
+    <div onClick={()=> navigate(`/restaurant/${id}`)} className="w-[330px] rounded-xl p-3 flex flex-col gap-2 hover:shadow-[0px_4px_19px_-9px_rgba(0,_0,_0,_0.7)] cursor-pointer ">
         <img className="w-[100%]  rounded-xl h-[230px]" src={`${imgId}${resImageID}`} alt="" />
         <div className="flex justify-between">
             <p className="font-bold">{name}</p>
