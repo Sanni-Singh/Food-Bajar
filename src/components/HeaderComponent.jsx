@@ -11,7 +11,7 @@ const HeaderComponent = () => {
     const [one , setOne] = useState(true);
     const [two , settwo] = useState(false);
     const [three , setThree] = useState(false);
-    const[userInfo,setUserInfo] = useState({})
+    const[userInfo,setUserInfo] = useState(null)
     const navigate = useNavigate();
     const data = localStorage?.getItem('userData');
     const userDetails = JSON?.parse(data);
