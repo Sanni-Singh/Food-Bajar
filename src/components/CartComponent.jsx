@@ -3,6 +3,7 @@ import CartCard from './CartCard'
 import { useContext, useState,useEffect } from "react";
 import { UserContext } from "../App";
 import ShimmerUi from "./ShimmerUi";
+import { Bounce, toast } from "react-toastify";
 const CartComponent = () => {
   const navigate = useNavigate();
   const [showEmpty,setShowEmpty] = useState(false);
@@ -28,6 +29,19 @@ const CartComponent = () => {
     
     
   },[cardArr])
+  const paymentFn=()=>{
+    toast.info('Payment Page on Maintenance', {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Bounce,
+      });
+  }
   
   return (
     <div className="w-[100%] xl:pt-[120px] pb-[100px] pt-[70px] flex flex-col gap-4 ">
@@ -46,7 +60,7 @@ const CartComponent = () => {
                   </div>
                   <div className="flex justify-around">
                     <button onClick={clearCart} className="bg-red-700 hover:bg-orange-600  px-4 py-2 rounded-md text-white cursor-pointer font-bold">Clear Cart</button>
-                    <button className="bg-red-700 hover:bg-orange-600 px-4 py-2 rounded-md text-white cursor-pointer font-bold">Process to Payment</button>
+                    <button onClick={paymentFn} className="bg-red-700 hover:bg-orange-600 px-4 py-2 rounded-md text-white cursor-pointer font-bold">Process to Payment</button>
                   </div>
               </div>
             </div>

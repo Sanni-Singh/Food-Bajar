@@ -28,7 +28,6 @@ const HeaderComponent = () => {
         localStorage.removeItem('userInformation')
         navigate("/login");
     }
-    console.log(userInfo);
     
     
     

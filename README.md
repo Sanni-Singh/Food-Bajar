@@ -6,7 +6,7 @@ Food Bajar is an interactive and user-friendly food ordering web application. It
 
 ## 🔗 Live Demo
 
-Check out the live version of the app here: [Movies Bajar AI Live]()
+Check out the live version of the app here: [Movies Bajar AI Live](https://food-bajar.vercel.app/)
 
 ## 🚀 Features
 
