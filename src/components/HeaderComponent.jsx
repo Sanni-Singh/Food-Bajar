@@ -48,7 +48,7 @@ const HeaderComponent = () => {
                 setOne(false);
                 setThree(false);
                 settwo(true);
-                }} className={`${two ? "text-orange-600":"text-gray-600"} cursor-pointer`}>Reviwes</p>
+                }} className={`${two ? "text-orange-600":"text-gray-600"} cursor-pointer`}>Reviews</p>
             <p onClick={()=>{
                 navigate('/cart')
                 settwo(false);
