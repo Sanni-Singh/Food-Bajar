@@ -1,10 +1,14 @@
-# Food Bajar
+# 🍔  Food Bajar
 
 ## Overview
 
 Food Bajar is an interactive and user-friendly food ordering web application. It allows users to explore top food brands, search for restaurants, view food items, and add them to the cart seamlessly. The application includes essential features like user authentication, a responsive carousel, and a dynamic food card page for each restaurant.
 
-## Features
+## 🔗 Live Demo
+
+Check out the live version of the app here: [Movies Bajar AI Live]()
+
+## 🚀 Features
 
 - **Home Page**:
 
@@ -35,7 +39,7 @@ Food Bajar is an interactive and user-friendly food ordering web application. It
 
   - Contains relevant links and information about the platform.
 
-##  Technologies Used
+## 🚀  Technologies Used
 * React.js
 * Context (for state management)
 * Tailwind CSS (for styling)
