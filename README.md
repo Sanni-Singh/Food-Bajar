@@ -51,3 +51,22 @@ Food Bajar is an interactive and user-friendly food ordering web application. It
 5. The Search Bar helps users find restaurants quickly.
 6. Users can log in/log out for a personalized experience.
 7. Users can visit the Review Page to provide feedback and view existing reviews.
+
+## 🌟 Show Your Support
+
+* If you like this project, give it a ⭐️ and share it with your friends!
+* Feel free to open an issue if you have any feature requests or bug reports.
+
+## 🤝 Contributing
+
+We welcome contributions to enhance Movies Bajar AI!
+Here’s how you can help:
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature-name).
+3. Commit your changes (git commit -m "Add feature name").
+4. Push to the branch (git push origin feature-name).
+5. Open a pull request.
+
+## 📧 Contact
+* Author: Sanni Singh
+* Email: (aryansingh7371@gmail.com)
