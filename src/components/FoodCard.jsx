@@ -70,7 +70,7 @@ const FoodCard = ({rating , price , cuisines , deliveryTime , id , name , imageI
         </div>
         <div className="flex justify-between px-2">
             <button onClick={submitFoodDetails} className="bg-orange-500 hover:bg-red-600 cursor-pointer text-white px-3 py-1 rounded-md">Add To Card</button>
-            <button onClick={()=> navigate("/cart")} className="bg-orange-500 hover:bg-red-600 cursor-pointer text-white px-3 py-1 rounded-md">Go To Card</button>
+            <button onClick={()=> navigate("/cart")} className="bg-orange-500 hover:bg-red-600 cursor-pointer text-white px-3 py-1 rounded-md">Go To Cart</button>
         </div>
     </div>
   )
